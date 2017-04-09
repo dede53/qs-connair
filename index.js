@@ -8,14 +8,9 @@ var connair 		= new adapter({
 });
 
 process.on('message', function(data) {
-	var status = data.status;
 	var data = data.data;
-	if(data.protocol.includes(":")){
-		data.protocol = data.protocol.split(":");
-	}else{
-		data.protocol = [data.protocol];
-	}
-	switch(data.protocol[1]){
+	var status = data.status;
+	switch(data.protocol){
 		case "elro":
 			var msg = connair_create_msg_elro(status, data);
 			break;
