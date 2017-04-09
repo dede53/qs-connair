@@ -1,7 +1,9 @@
 {
+	"description": "Schaltet Geräte über ein Connair-Gateway",
 	"connairs": [{
 		"ip": "192.168.178.2",
 		"port": 49880
 	}],
-	"version":"0.0.1"
+	"version":"0.0.1",
+	"loglevel":1
 }

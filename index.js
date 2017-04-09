@@ -1,11 +1,6 @@
 var adapter 		= require('../../adapter-lib.js');
 var dgram 			= require('dgram');
-var connair 		= new adapter({
-	"name": "Connair",
-	"loglevel": 1,
-	"description": "Schaltet Geräte über ein Connair-Gateway",
-	"settingsFile": "connair.json"
-});
+var connair 		= new adapter("Connair");
 
 process.on('message', function(data) {
 	var data = data.data;
