@@ -2,9 +2,9 @@ var adapter 		= require('../../adapter-lib.js');
 var dgram 			= require('dgram');
 var connair 		= new adapter("Connair");
 
-process.on('message', function(data) {
-	var data = data.data;
-	var status = data.status;
+process.on('message', function(request) {
+	var data = request.data;
+	var status = request.status;
 	switch(data.protocol){
 		case "elro":
 			var msg = connair_create_msg_elro(status, data);
