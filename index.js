@@ -84,7 +84,7 @@ function connair_create_msg_elro(status, data) {
 }
 
 function connair_create_msg_raw(status, data){
-	if(status === 1){
+	if(status == 1){
 		return data.CodeOn;
 	}else{
 		return data.CodeOff;
