@@ -2,7 +2,7 @@ var adapter 		= require('../../adapter-lib.js');
 var dgram 			= require('dgram');
 var connair 		= new adapter("Connair");
 
-process.on('message', function(request) {
+connair.on('connair', function(request) {
 	var data = request.data;
 	var status = request.status;
 	switch(data.protocol){
